@@ -82,14 +82,14 @@ def checkout(cart, coupons)
   # some irritated customers
   
   
-  
+  total = 0
   consolidated_cart = consolidate_cart(cart)
   cart_with_coupons = apply_coupons(consolidated_cart, coupons)
   clearance_items = apply_clearance(cart_with_coupons)
   binding.pry
   
   clearance_items.each do |item, num|
-    total = nu
+    total += num[:price] * num[:count]
     binding.pry
   end
   total 
