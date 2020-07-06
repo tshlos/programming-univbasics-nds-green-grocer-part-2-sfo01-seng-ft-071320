@@ -88,8 +88,8 @@ def checkout(cart, coupons)
   clearance_items = apply_clearance(cart_with_coupons)
   binding.pry
   
-  clearance_items.collect { |item|
-    
+  clearance_items.each do |item|
+    item[:price][:count].
   end
   total 
 end
