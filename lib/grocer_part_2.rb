@@ -89,11 +89,9 @@ def checkout(cart, coupons)
   binding.pry
   
   total = 0 
-  clearance_items.each do |item|
+  count = clearance_items.each { |item| item[:item] * item[:count] } 
+    total += count
     binding.pry
-    total += item[:item] * item[:count]
-    binding.pry
-  end 
   total 
 end
 
