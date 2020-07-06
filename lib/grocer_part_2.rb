@@ -90,7 +90,7 @@ def checkout(cart, coupons)
   
   total = 0 
   clearance_items.each do |item|
-  count =  { |item| item[:item] * item[:count] } 
+  count = cart.each { |item| item[:item] * item[:count] } 
     total += count
     binding.pry
   end 
