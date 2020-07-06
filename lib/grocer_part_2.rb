@@ -88,7 +88,6 @@ def checkout(cart, coupons)
   clearance_items = apply_clearance(cart_with_coupons)
   binding.pry
   
-  total = 0 
   clearance_items.each do |item|
   end
   total 
